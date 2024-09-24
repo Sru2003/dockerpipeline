@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("checkout") {
             steps {
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/Sru2003/dockerpipeline/']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'jenkins-demo-2', url: 'https://github.com/Sru2003/dockerpipeline/']])
             }
         }
         stage("Build Image") {
